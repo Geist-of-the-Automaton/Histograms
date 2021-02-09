@@ -124,7 +124,7 @@ void MainWindow::menuClick(Function function) {
         QPainter p;
         p.begin(&qi);
         p.setPen(QPen(Qt::white));
-        p.setFont(QFont("Arial", 11, QFont::Light));
+        p.setFont(QFont("Arial", 9, QFont::ExtraLight));
         info = "Dims: " + to_string(image.cols) + "x" + to_string(image.rows) + ", Intensity Min: " + to_string(minI) + ", Max: " + to_string(maxI) + ", Mean: " + to_string(meanI) + ", Depth Bytes: " + to_string(image.elemSize1());
         p.drawText(qi.rect(), Qt::AlignBottom, QString(info.c_str()));
         p.drawLine(bins - crosshairSize, outOf, bins + crosshairSize, outOf);
@@ -173,7 +173,7 @@ void MainWindow::resizeEvent(QResizeEvent *event) {
     QPainter p;
     p.begin(&qi);
     p.setPen(QPen(Qt::white));
-    p.setFont(QFont("Arial", 11, QFont::Light));
+    p.setFont(QFont("Arial", 9, QFont::ExtraLight));
     p.drawText(qi.rect(), Qt::AlignBottom, QString(info.c_str()));
     p.drawLine(bins - crosshairSize, outOf, bins + crosshairSize, outOf);
     p.drawLine(bins, outOf - crosshairSize, bins, outOf + crosshairSize);
